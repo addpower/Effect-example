@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css导航栏下划线效果</title>
+    <style>
+
+        .wrapper{
+
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            /* position: absolute; */
+            width: 800px;
+            /* top: 50%; */
+            /* left: 50%; */
+            /* transform: translate(-50%, -50%); */
+        }
+
+        li{
+            position: relative;
+            padding: 20px;
+            font-size: 24px;
+            color: #000;
+            line-height: 1;
+            cursor: pointer;
+            transition: all 0.2s linear;
+
+        }
+
+        li::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 0;
+            height: 100%;
+            border-bottom: 2px solid #000;
+            transition: all 0.2s linear;
+        }
+
+
+
+        li:hover::before{
+            width: 100%;
+            top: 0;
+            left: 0;
+            transition-delay: 0.1s;
+            border-bottom-color: #000;
+            z-index: -1;
+        }
+
+        li:hover~li::before{
+            left: 0;
+        }
+
+        li:active{
+            background: #000;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <ul class="menus">
+            <li>导航栏1</li>
+            <li>导航栏2</li>
+            <li>导航栏3</li>
+            <li>导航栏4</li>
+            <li>导航栏5</li>
+        </ul>
+    </div>
+</body>
+</html>
