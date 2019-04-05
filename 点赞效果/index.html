@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .heart{
+            cursor: pointer;
+            height: 50px;
+            width: 50px;
+            background-image: url('./heart.png');
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: 2900%;
+        }
+
+        .is_animating{
+            animation-name: heart-burst;
+            animation-duration: 800ms;
+            animation-timing-function: steps(28);
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+    
+
+        @keyframes heart-burst{
+            from{
+                background-position: left;
+            }
+            to{
+                background-position: right;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <script>
+        var oHeart = document.getElementsByClassName('heart')[0];
+
+        oHeart.addEventListener('click',function(){
+            this.classList.toggle('is_animating');
+        })
+
+        oHeart.addEventListener('animationend',function(){
+            this.classList.add('is_animating');
+        })
+    </script>
+</body>
+</html>
