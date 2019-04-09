@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    position: relative;
+    width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.wrapper .inputBox {
+    position: relative;
+}
+
+.wrapper .inputBox .inp {
+    width: 270px;
+    padding: 15px;
+    outline: none;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.wrapper .inputBox .icon{
+    display: none;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 0;
+    background-image: url('./关闭.png');
+    background-size: 100% 100%;
+    top: 50%;
+    margin-top: -16px;
+    cursor: pointer;
+}
+
+.wrapper p{
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.wrapper canvas{
+    border: 1px solid #000;
+    background-image: url('./bg.png');
+    background-size: 100% 100%;
+    border-radius: 5px;
+}
+.wrapper .box{
+    position: relative;
+}
+.wrapper .refresh{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 20px;
+    background-image: url('./刷新.png');
+    background-size: 100% 100%;
+    top: 50%;
+    margin-top: -16px;
+    cursor: pointer;
+    border: none;
+
+}
+
+.wrapper .submit{
+    margin: 10px;
+    border: none;
+    padding: 10px 20px; 
+    background-color: #61BA00;
+    color: #fff;
+    cursor: pointer;
+}
