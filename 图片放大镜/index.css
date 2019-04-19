@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    display: block;
+}
+
+.leftcon{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 100px 20px 0 312px;
+    float: left;
+    box-shadow: 3px 3px 10px 0 #111;
+}
+
+.leftcon img{
+    width: 100%;
+    height: 100%;
+}
+
+.leftcon .slide_box{
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: move;
+    width: 175px;
+    height: 175px;
+    background-color: #000;
+    opacity: 0.3;
+    display: none;
+}
+
+.rightcon{
+    display: none;
+    width: 350px;
+    height: 350px;
+    margin-top: 100px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.rightcon img{
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    left: 0;
+    top:0;
+}
